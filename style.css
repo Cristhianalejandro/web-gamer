@@ -157,6 +157,30 @@ body.active{ overflow-y: hidden; }
     transition: var(--transition-1);
 }
 
+.btn-secundary{
+    background: var(--raisin-black-1);
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.btn-primary{
+    background: var(--white);
+    color: var(--orange);
+    transition: 0.5s;
+    margin: 10px;
+}
+
+
+.btn-primary:is(:hover, :focus){
+    background: var(--raisin-black-1);
+    color: var(--white);
+}
+
+.btn-secundary:is(:hover, :focus){
+    background: var(--white);
+    color: var(--orange);
+}
+
 .header{
     position: fixed;
     top: 0;
