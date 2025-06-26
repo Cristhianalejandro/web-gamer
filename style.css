@@ -85,10 +85,17 @@ html{
     scroll-behavior: smooth;
 }
 
-body{ overflow-x: hidden; }
+body{ width: 100vw; overflow-x: hidden; }
 
 body.active{ overflow-y: hidden; }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 ::-webkit-scrollbar{width: 8px;}
 
 ::-webkit-scrollbar-track{background: var(--raisin-black-1); }
@@ -114,6 +121,12 @@ body.active{ overflow-y: hidden; }
     padding-inline: 15px;
     margin-inline: auto;
     max-width: 1200px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding-inline: 10px;
+    max-width: 100%;
+  }
 }
 
 .h1{
@@ -159,14 +172,14 @@ body.active{ overflow-y: hidden; }
 
 .btn-secundary{
     background: var(--raisin-black-1);
-    transition: 0.5s;
+    transition: 1s;
     margin: 10px;
 }
 
 .btn-primary{
     background: var(--white);
     color: var(--orange);
-    transition: 0.5s;
+    transition: 1s;
     margin: 10px;
 }
 
@@ -290,7 +303,9 @@ body.active{ overflow-y: hidden; }
   visibility: visible;
 }
 
-
+main {
+    width: 100%;
+}
 .hero{
     background: url("./images/hero-banner.jpg") no-repeat;
     background-size: cover;
@@ -298,7 +313,8 @@ body.active{ overflow-y: hidden; }
     margin-top: 90px;
     padding: var(--section-padding) 0;
     height: 100vh;
-    max-height: 1000px;
+    width: 100%;
+ max-width: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,7 +346,7 @@ body.active{ overflow-y: hidden; }
 }
 
 .section-wrapper{
-    background: url("./images/section-wrapper-bg.jpg") no-repeat;
+    background: url("images/section-wrapper-bg.jpg") ;
     background-size: cover;
     background-position: center;
 }
@@ -338,15 +354,62 @@ body.active{ overflow-y: hidden; }
 .about{
     background: url("./images/about-img-shadow.png") no-repeat;
     background-size: 100%;
-    background-position: center;
+    background-position: top center;
     padding: 120px 0 var(--section-padding);
 }
 
 .about-banner{ margin-bottom: 40px; }
 
-.about-img{ width: 100%; }
+.about-img{ width: 50%; margin-left: 305px !important; }
 
-.character{
+.character{ display: none; }
 
-    
+.about-content{
+    background: var(--raisin-black-1);
+    color: var(--white);
+    padding: 40px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.about-subtitle{
+    color: var(--orange);
+    font-family: var(--ff-oswald);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about-title{
+    font-family: var(--ff-oswald);
+    font-size: var(--fs-2);
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-title strong{ color: var(--orange); }
+
+.about-text,
+.about-bottom-text{
+    color: var(--light-gray);
+    font-size: var(--fs-9);
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.about-text{ margin-bottom: 20px; }
+
+.about-bottom-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.about-bottom-text ion-icon{
+    color: var(--orange);
+    font-size: 25px;
+    --ionicon-stroke-width: 45px;
 }
