@@ -194,6 +194,12 @@ html, body {
     color: var(--orange);
 }
 
+.btn-link:is(:hover, :focus){ color: var(--orange); }
+
+.has-scrollbar::-webkit-scrollbar { height: 6px; }
+
+.has-scrollbar::-webkit-scrollbar-button { width: 40px; }
+
 .header{
     position: fixed;
     top: 0;
@@ -314,7 +320,7 @@ main {
     padding: var(--section-padding) 0;
     height: 100vh;
     width: 100%;
- max-width: none;
+    max-width: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,4 +418,154 @@ main {
     color: var(--orange);
     font-size: 25px;
     --ionicon-stroke-width: 45px;
+}
+
+.tournament{
+    padding: var(--section-padding) 0;
+    color: var(--white);
+    text-align: center;
+}
+
+.tournament-content{ margin-bottom: 50px; }
+
+.tournament-subtitle{
+    color: var(--light-gray);
+    font-size: var(--fs-9);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.tournament .btn-primary{
+    width: max-content;
+    margin-inline: auto;
+}
+
+.tournament-prize-title{ margin-bottom: 50px; }
+
+.tournament-prize data{
+    background: var(--orange);
+    color: var(--raisin-black-1);
+    font-family: var(--ff-oswald);
+    font-size: var(--fs-4);
+    padding: 8px 42px;
+    border-radius: 50px;
+}
+
+.tournament-prize img{ margin-inline: auto; }
+
+.tournament-winners {
+    background: var(--raisin-black-1);
+    padding: 40px 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tournament-winners-title{
+    font-size: var(--fs-3);
+    margin-bottom: 25px;
+}
+
+.tournament-winners-list{
+    display: flex ;
+    justify-content: center;
+    text-align: center;
+    align-items: center ;
+    gap: 20px;
+}
+
+.winners{
+ 
+    justify-content: center ;
+    text-align: center ;
+    align-items: center ;
+}
+
+.winner-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.winner-card .card-title{
+    background: var(--orange);
+    width: 200px;
+    margin-inline: auto;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.gallery { padding: var(--section-padding) 0; }
+
+.gallery-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin: -15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: inline mandatory;
+    padding-inline: 15px;
+}
+
+.gallery-list li{
+    min-width: 95%;
+    scroll-snap-align: center;
+}
+
+.gallery-item img{
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.section-title{
+    margin-bottom: 20px;
+}
+
+.team-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;                    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ion-icon{
+    color: var(--orange);
+    font-size: 50px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    --ionicon-stroke-width: 45px;
+}
+
+.team-member{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border: 2px dashed var(--orange);
+    background-color: black;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+    color: white;
+    border-radius: 10px;
 }
