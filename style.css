@@ -44,10 +44,11 @@
 
 
 
- --polygon-1: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+ --polygon-1: polygon(75% 0, 100% 25%, 100%, 100%, 25% 100%, 0 75%, 0 0);
  --polygon-2: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
  --polygon-3: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
  --polygon-4: polygon(96% 0, 100% 36%, 100% 100%, 4% 100%, 0 66%, 0 0);
+ --polygon-5: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
 }
 
 *, *::before, *::after{
@@ -154,26 +155,30 @@ html, body {
     line-height: 1.2;
 }
 
-.btn{
-    color: var(--white);
-    font-family: var(--ff-oswald);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-500);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 34px;
-    clip-path: var(--polygon-1);
-    transition: var(--transition-1);
+.btn {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 34px;
+  clip-path: var(--polygon-99);
+  transition: var(--transition-1);
+  width: auto;
+  max-width: 200px;
 }
+
 
 .btn-secundary{
     background: var(--raisin-black-1);
     transition: 1s;
     margin: 10px;
+    clip-path: var(--polygon-5);
 }
 
 .btn-primary{
@@ -181,8 +186,9 @@ html, body {
     color: var(--orange);
     transition: 1s;
     margin: 10px;
+    padding: 10px;
+    clip-path: var(--polygon-5);
 }
-
 
 .btn-primary:is(:hover, :focus){
     background: var(--raisin-black-1);
@@ -532,6 +538,9 @@ main {
 
 .section-title{
     margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-list{
@@ -568,4 +577,196 @@ ion-icon{
     box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
     color: white;
     border-radius: 12px;
+    border-radius: 10px;
+}
+
+.gears { padding: var(--section-padding) 0; }
+
+.gears-list{
+    display: grid;
+    gap: 50px;
+}
+
+.gears-card .card-banner {
+  position: relative;
+  background: url("./images/gears-card-bg.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 2 / 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+
+.logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+
+.gears-card .card-banner img {
+  max-width: 150px;
+  height: auto;
+}
+
+
+.team-member img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+.gallery-item .PROBLEM {
+  height: auto;
+}
+
+
+.winner-card img {
+  max-width: 120px;
+  height: auto;
+}
+
+.gears-card .card-banner img {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gears-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--orange);
+  margin-left: 40px;
+}
+
+.gears-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gears-list li {
+  flex: 1 1 250px;
+  max-width: 250px;
+}
+
+
+.share {
+  position: absolute;
+  top: 25%;
+  right: 8%;
+  font-size: 20px;
+  border: 2px dashed var(--onyx);
+  color: var(--orange);
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 2;
+  border-radius: 50%;
+  transition: var(--transition-1);
+}
+
+.share,
+.card-time-wrapper{
+    position: absolute;
+    color: var(--orange);
+}
+
+.share.btn-link:is(:hover, :focus) { border-color: var(--orange); }
+
+.card-time-wrapper {
+  position: relative;
+  color: var(--orange);
+  font-family: var(--ff-oswald);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.img-problematicas{
+    width: 100px;
+    height: auto;
+}
+
+.gears-card :is(.card-title, .card-prize){
+    font-family: var(--ff-oswald);
+    font-style: var(--fs-5);
+    font-weight: var(--fw-700);
+}
+
+.gears-card .btn{ padding: 18px 20px; }
+
+.gears-card .btn-primary{
+    font-size: var(--fs-7);
+    padding-block: 15px;
+    clip-path: var(--polygon-5);
+}
+
+.gears-card .btn-primary ion-icon{
+    font-size: 20px;
+    --ionicon-stroke-width: 80px;
+}
+
+.gears-card .card-btn {
+  clip-path: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0 75%, 0 0);
+  background: var(--raisin-black-1);
+  color: var(--orange);
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.gears-card .card-btn:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.gears-card .card-btn ion-icon {
+  color: inherit;
+  font-size: 45px;
+  transition: color 0.3s ease;
+  margin-left: 0px;
+}
+
+.a{
+    display: flex;
+    flex-direction: row;
+}
+
+.b{
+    width: 10px !important;
+    padding: 0 !important;
+    padding-right: 0 !important;
 }
